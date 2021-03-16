@@ -3,20 +3,25 @@
     height: 300px;
     padding: 0;
     border-radius: 4px;
-    background-color: #222;
-    box-shadow: inset 0px 0px 0px 2px #AAA;
-    background: url('./dropzone_bg.svg');
+    border: 2px solid #AAA;
+    background-color: #ECECEC;
+    background-position: center;
+    background-size: cover;
     display: block;
     position: relative;
     cursor: pointer;
     overflow: hidden;
 }
 
+.Dropzone.ativo {
+    border-color: #F02;
+}
+
 .btnFechar {
     padding: 1rem;
     border-radius: 50%;
     border: none;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +31,8 @@
     z-index: 10;
     cursor: pointer;
     transition: transform 0.3s ease;
+    opacity: 0;
+    outline: none;
 }
 
 .btnFechar:hover {
@@ -34,7 +41,7 @@
 
 .btnFechar::after, .btnFechar::before {
     content: '';
-    width: 3px;
+    width: 2px;
     height: 1rem;
     border-radius: 2px;
     background-color: #FFF;
@@ -50,15 +57,10 @@
     transform: rotate(-45deg);
 }
 
-.Dropzone input[type="file"] {
-    display: none;
+.btnFechar.ativo {
+    opacity: 1;
 }
 
-.preview {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
+.Dropzone input[type="file"] {
+    display: none;
 }
