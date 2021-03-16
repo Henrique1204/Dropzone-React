@@ -1,8 +1,11 @@
 import React from 'react';
+import Dropzone from './Dropzone/Dropzone.js';
 
 const App = () => {
   return (
-    <div></div>
+    <main>
+      <Dropzone />
+    </main>
   );
 };
 
