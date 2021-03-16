@@ -3,13 +3,12 @@ import estilos from './Dropzone.module.css';
 
 const Dropzone = () => {
     return (
-        <div className={estilos.Dropzone}>
-            <button className={estilos.btnTrocar}>Trocar</button>
+        <label className={estilos.Dropzone} htmlFor="arquivo">
             <button className={estilos.btnFechar}></button>
 
-            <img src="" alt="" className={estilos.preview} />
-            <input type="file" name="arquivo" />
-        </div>
+            <div className={estilos.preview}></div>
+            <input type="file" name="arquivo" id="arquivo" />
+        </label>
     );
 };
 
