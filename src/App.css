@@ -1,0 +1,43 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: inherit;
+    color: inherit;
+}
+
+html {
+    --fonte-principal: 'Spectral SC', serif;
+    --fonte-secundaria: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0px;
+    font-family: var(--fonte-secundaria);
+    background-color: #F4F4F4;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, li {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+main {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
